@@ -1,0 +1,267 @@
+/* ================================
+    ESTILOS PRINCIPALES BORIVAG PLUS
+   ================================ */
+html {
+  scroll-behavior: smooth;
+}
+/* Variables de color */
+:root {
+  --borivag-blue: #003366;
+  --borivag-red: #e60026;
+  --borivag-fucsia: #ff4081;
+  --borivag-rosado: #f8c9d6;
+  --borivag-gray: #f4f4f4;
+}
+
+/* Estilos globales */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 700;
+  color: var(--borivag-blue);
+  margin-top: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--borivag-red);
+  transition: color 0.3s ease;
+}
+a:hover {
+  color: var(--borivag-fucsia);
+}
+
+/* ===========================
+    HEADER
+   =========================== */
+#header {
+  background: var(--borivag-blue); /* azul sólido */
+  padding: 1em;
+  width: 100%;
+  z-index: 1000;
+}
+#header .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  font-size: 1.2em;
+  color: white;
+}
+#header nav a {
+  color: white;
+}
+
+/* ===========================
+    BANNER (HERO)
+   =========================== */
+#banner.major {
+  background: linear-gradient(to right, var(--borivag-fucsia), var(--borivag-rosado));
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 4em 2em;
+}
+
+#banner.major h1 {
+  font-size: 2.8em;
+  color: white;
+}
+#banner.major p {
+  font-size: 1.3em;
+  margin: 1em 0;
+  color: #f8c9d6;
+}
+
+/* ===========================
+    BOTONES
+   =========================== */
+.button {
+  display: inline-block;
+  border: none;
+  padding: 0.8em 1.6em;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: var(--borivag-blue); /* azul oscuro */
+  color: #fff;
+}
+.button:hover {
+  background: #002244; /* un azul aún más oscuro en hover */
+}
+.button.primary {
+  background: var(--borivag-fucsia);
+  color: #fff;
+}
+.button.primary:hover {
+  background: var(--borivag-red);
+}
+.button.whatsapp {
+  background: #25d366; /* verde oficial WhatsApp */
+  color: #fff;
+}
+.button.whatsapp:hover {
+  background: #1ebe5d;
+}
+
+/* ===========================
+    TARJETAS DE PRODUCTOS
+   =========================== */
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5em;
+  padding: 2em;
+  background: #fce4ec;
+}
+.tiles article {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+.tiles article:hover {
+  transform: translateY(-5px);
+}
+.tiles img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.tiles header {
+  padding: 1em;
+}
+.tiles h3 {
+  margin: 0;
+  color: var(--borivag-blue);
+}
+.tiles p {
+  font-size: 0.95em;
+  color: #555;
+}
+
+/* ===========================
+   CONTACTO
+   =========================== */
+#contacto {
+  background: var(--borivag-rosado);
+  padding: 3em 2em;
+  text-align: center;
+}
+#contacto h2 {
+  color: var(--borivag-red);
+}
+#contacto p {
+  margin: 0.5em 0;
+}
+
+/* ===========================
+   FOOTER
+   =========================== */
+#footer {
+  background: var(--borivag-blue);
+  color: white;
+  text-align: center;
+  padding: 2em 1em;
+  font-size: 0.9em;
+}
+#footer a {
+  color: var(--borivag-rosado);
+}
+/* Ajuste para imágenes de productos */
+#productos .image img {
+    width: 100%;
+    height: auto;
+    max-height: 500px; /* puedes ajustar este valor */
+    object-fit: contain; /* o "cover" si quieres recortar */
+    border-radius: 10px; /* opcional para bordes redondeados */
+}
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 2000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+.modal-content {
+  background: #fff;
+  padding: 2em;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+}
+.modal img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1em;
+}
+.close {
+  position: absolute;
+  top: 10px; right: 15px;
+  font-size: 1.5em;
+  font-weight: bold;
+  cursor: pointer;
+  color: #333;
+}
+/* ===== MENÚ PRINCIPAL ===== */
+#main-menu {
+  background: var(--borivag-blue);
+  padding: 0.8em 2em;
+  position: sticky; /* se queda arriba al hacer scroll */
+  top: 0;
+  z-index: 1000;
+}
+#main-menu .menu-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#main-menu .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+#main-menu .logo img {
+  height: 40px;
+  border-radius: 5px;
+}
+#main-menu .menu-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5em;
+  margin: 0;
+  padding: 0;
+}
+#main-menu .menu-links li a {
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+#main-menu .menu-links li a:hover {
+  color: var(--borivag-rosado);
+}
+.about-page {
+  background: #f9f9f9;   /* fondo gris claro */
+  color: #333;           /* texto oscuro para que sea legible */
+  min-height: 100vh;     /* ocupa toda la pantalla */
+  padding: 2em 0;
+}

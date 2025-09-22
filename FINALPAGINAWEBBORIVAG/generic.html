@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Sobre Nosotros - Borivag Plus Selva Central</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+        /* ==== Estilos personalizados para SOBRE NOSOTROS ==== */
+        .about-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 3em 1.5em;
+        }
+        .about-section {
+            background: #fff;
+            border-radius: 15px;
+            padding: 2em;
+            margin-bottom: 2em;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+        .about-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .about-section h2 {
+            color: var(--borivag-blue);
+            margin-bottom: 0.5em;
+            font-size: 1.6em;
+        }
+        .about-section p {
+            font-size: 1.05em;
+            line-height: 1.7;
+            margin-bottom: 1em;
+        }
+        .values-list {
+            list-style: none;
+            padding: 0;
+        }
+        .values-list li {
+            margin-bottom: 0.8em;
+            font-size: 1.1em;
+        }
+        .values-list li b {
+            color: var(--borivag-fucsia);
+        }
+        .cta-buttons {
+            text-align: center;
+            margin-top: 2em;
+        }
+        .cta-buttons .button {
+            margin: 0.5em;
+        }
+    .about-page {
+  background: #f9f9f9;
+  color: #333;
+}
+</style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+      <a href="index.html" class="logo">
+        <img src="images/logo.jpg" alt="Borivag Plus Selva Central" style="height:60px;" />
+        <span>Borivag Plus Selva Central</span>
+      </a>
+    </header>
+
+    <!-- Menú -->
+    <nav id="main-menu">
+        <ul class="menu-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="generic.html">Sobre Nosotros</a></li>
+            <li><a href="index.html#productos">Productos</a></li>
+            <li><a href="landing.html">Destacado</a></li>
+            <li><a href="index.html#contacto">Contacto</a></li>
+        </ul>
+</nav>
+    </nav>
+
+    <!-- Contenido principal -->
+    <section class="about-container">
+        <div class="about-section">
+            <h1>Nuestra Historia</h1>
+            <p><b>Soy Jhanett Ticllacuri Camasca</b>, y al igual que muchas mujeres, padecí en silencio infecciones íntimas y molestias que llegué a normalizar. Durante años, yo y muchas otras callamos por vergüenza o desconocimiento. Fue mi propia experiencia la que me motivó a buscar soluciones reales y efectivas, respaldadas por la ciencia, que no solo me ayudaran a mí, sino que también pudieran transformar la vida de otras mujeres.</p>
+        </div>
+
+        <div class="about-section">
+            <h2>Nuestra Misión</h2>
+            <p>Ayudar a todas las mujeres que sufren de estas condiciones, ofreciendo productos confiables, naturales y con respaldo científico. Queremos que cada mujer se sienta segura, acompañada y con la confianza de que su salud íntima es una prioridad.</p>
+            <p style="font-weight:bold; color:var(--borivag-fucsia); font-size:1.2em;">
+                “No estás sola. Lo que por años callamos y normalizamos, hoy tiene solución. Estamos aquí para apoyarte 24/7, con empatía y compromiso.”
+            </p>
+        </div>
+
+        <div class="about-section">
+            <h2>Nuestra Visión</h2>
+            <p>Convertirnos en el distribuidor líder en productos de salud íntima en todo el Perú y alcanzar presencia internacional, llevando soluciones y esperanza a todas las mujeres que lo necesiten.</p>
+        </div>
+
+        <div class="about-section">
+            <h2>Nuestros Valores</h2>
+            <ul class="values-list">
+                <li>🌱 <b>Salud y Bienestar:</b> Cada producto que ofrecemos está pensado para cuidar la salud íntima femenina.</li>
+                <li>👩‍⚕️ <b>Confianza y Respaldo Científico:</b> Nos basamos en la evidencia y en la experiencia de miles de mujeres.</li>
+                <li>🤝 <b>Empatía y Cercanía:</b> Escuchamos y comprendemos las necesidades de cada mujer, con atención personalizada.</li>
+                <li>🚚 <b>Responsabilidad y Compromiso:</b> Cumplimos con entregas rápidas y seguras en todo el Perú.</li>
+                <li>🌍 <b>Accesibilidad:</b> Queremos que cada mujer, sin importar dónde viva, tenga acceso a productos que mejoren su vida.</li>
+            </ul>
+        </div>
+
+        <div class="about-section">
+            <h2>Nuestro Compromiso Futuro</h2>
+            <p>Sabemos que podemos dar aún más. Por eso, te prometemos que con cada nueva venta y con el apoyo de nuestras clientas, iremos mejorando nuestros servicios, ampliando nuestro catálogo y fortaleciendo nuestra presencia, para seguir ayudando a más mujeres.</p>
+        </div>
+
+        <div class="cta-buttons">
+            <a href="index.html#productos" class="button primary">Ver Catálogo</a>
+            <a href="https://wa.me/51992716072" class="button whatsapp" target="_blank">WhatsApp</a>
+        </div>
+    </section>
+
+    <!-- JS para animación de scroll -->
+    <script>
+      const sections = document.querySelectorAll('.about-section');
+      const showOnScroll = () => {
+        const trigger = window.innerHeight * 0.85;
+        sections.forEach(section => {
+          const top = section.getBoundingClientRect().top;
+          if (top < trigger) {
+            section.classList.add('visible');
+          }
+        });
+      };
+      window.addEventListener('scroll', showOnScroll);
+      window.addEventListener('load', showOnScroll);
+    </script>
+</body>
+</html>
